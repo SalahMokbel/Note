@@ -67,8 +67,10 @@ class App(QWidget):
 
         user_name_info = self.User_name.text()
         password_info = self.Password.text()
-
-        os.chdir("C:/Users/broye97/Desktop/untitled/Passwords")
+        
+        # password's file path
+        os.chdir("C:/")
+        
         info = os.listdir()
         if user_name_info in info:
             file = open(user_name_info, "r")
@@ -156,7 +158,9 @@ class Ui_Form(QWidget):
     def viewNote(self):
 
         name = self.open_entry.text()
-        os.chdir("C:/Users/broye97/Desktop/untitled/Note's")
+                 
+        # note's file path
+        os.chdir("C:/")
         file = os.listdir()
         if name in file:
             f = open(name, "r")
@@ -167,8 +171,9 @@ class Ui_Form(QWidget):
 
 
     def lwidget(self):
-
-        os.chdir("C:/Users/broye97/Desktop/untitled/Note's")
+        
+        # note's file path
+        os.chdir("C:/")
 
         notes = os.listdir()
         for i in notes:
@@ -179,7 +184,10 @@ class Ui_Form(QWidget):
     def refresh(self):
 
         self.listWidget.clear()
-        os.chdir("C:/Users/broye97/Desktop/untitled/Note's")
+        
+        # note's file path
+        os.chdir("C:/")
+        
         notes = os.listdir()
         for i in notes:
             item = QListWidgetItem()
@@ -222,8 +230,10 @@ class newNote(QWidget):
 
         self.notename.clear()
         self.input.clear()
-
-        os.chdir("C:/Users/broye97/Desktop/untitled/Note's")
+        
+        # note's file path
+        os.chdir("C:/")
+        
         note_info = open(note_name, "w")
         note_info.write(note)
         note_info.close()
@@ -277,8 +287,9 @@ class Register(QWidget):
         username = self.username_entry1.text()
         password = self.password_entry2.text()
         confirmpassword = self.confirmpassword_entry3.text()
-
-        os.chdir("C:/Users/broye97/Desktop/untitled/Passwords")
+        
+        # password file path
+        os.chdir("C:/")
 
 
         if confirmpassword == password:
