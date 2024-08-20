@@ -4,6 +4,8 @@ from PyQt5.QtGui import QIcon, QFont
 from PyQt5 import QtCore, pylupdate
 import os
 
+# new comment 
+
 class App(QWidget):
     def __init__(self):
         super().__init__()
